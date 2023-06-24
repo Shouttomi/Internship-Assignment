@@ -10,11 +10,13 @@ function App() {
   const [loading, setloading] = useState(true);
   const [people, setpeople] = useState([]);
 
+  const url = 'https://reqres.in/api/users?page=2'
+  
   const fetchdata = async () => {
     setloading(true);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_REQUEST_URL}`);
+      const response = await fetch(url);
       const data = await response.json();
       setpeople(data);
       setloading(false);
