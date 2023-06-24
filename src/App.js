@@ -14,7 +14,7 @@ function App() {
     setloading(true);
 
     try {
-      const response = await fetch(process.env.REACT_APP_REQUEST_URL);
+      const response = await fetch(`${process.env.REACT_APP_REQUEST_URL}`);
       const data = await response.json();
       setpeople(data);
       setloading(false);
