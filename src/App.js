@@ -20,10 +20,10 @@ function App() {
       const data = await response.json();
       setpeople(data);
       setloading(false);
-      console.log(data);
+     
     } catch (error) {
       setloading(false);
-      console.log(error);
+      
     }
   };
 
