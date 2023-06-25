@@ -12,7 +12,7 @@ const Search = ({ setuser, user }) => {
     } else {
       setuser("");
     }
-    console.log(helper, user);
+    
     sethelper("");
   };
 
