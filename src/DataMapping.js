@@ -8,11 +8,7 @@ const DataMapping = ({data,user}) => {
         return user === item.first_name
     })
 
-    console.log(checker)
-
     if(checker.length > 0){
-        const {first_name} = checker[0]
-        console.log(first_name)
 
         return(
             data.map((item) =>{
@@ -21,7 +17,7 @@ const DataMapping = ({data,user}) => {
                 
                 if(first_name === user){
                 return (
-                    <div className='center'>
+                    <div className='center' key={id}>
         
                     <Article firstname={first_name} id={id} image={avatar}/>
                     </div>
@@ -32,12 +28,7 @@ const DataMapping = ({data,user}) => {
             })
         )
 
-        /* return (
-            data.filter((item)=>{
-
-                return item.first_name === user
-            })
-            ) */
+      
     }
     else if(checker.length === 0 && user.length!==0){
         return(
@@ -54,7 +45,7 @@ const DataMapping = ({data,user}) => {
         const {first_name,id,avatar} = item
         
         return (
-            <div className='center'>
+            <div className='center' key={id}>
 
             <Article firstname={first_name} id={id} image={avatar}/>
             </div>
