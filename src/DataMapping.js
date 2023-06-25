@@ -2,7 +2,6 @@ import Article from "./Article"
 
 const DataMapping = ({data,user}) => {
 
-    console.log(user.length)
 
     const checker = data.filter((item)=>{
         return user === item.first_name
