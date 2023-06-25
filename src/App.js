@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     fetchdata();
-    console.log(user);
+   
   }, [user]);
 
   if (loading) {
